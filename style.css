@@ -391,4 +391,45 @@ p {
     background-color: var(--color-dark-white);
 }
 
-/* Testimonials*/
+/* Testimonials */
+#testimonials {
+    background-color: var(--color-light-white);
+}
+
+.testimonials {
+    margin: 40px;
+}
+
+.testimonial {
+    display: flex;
+    margin: 32px 0;
+}
+
+.testimonials__avatar {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.testimonials__avatar:nth-child(odd) {
+    /* testimonials__avatar의 child가 홀수(odd)일 때 */
+    margin-right: 40px;
+}
+
+.testimonials__avatar:nth-child(even) {
+    /* testimonials__avatar의 child가 짝수(even)일 때 */
+    margin-left: 40px;
+}
+
+.testimonials__speech-bubble {
+    padding: 18px;
+    background-color: var(--color-white);
+    border-radius: var(--animation-duration);
+}
+
+.testimonials__speech-bubble p {
+    color: var(--color-light-grey);
+}
+
+.name {
+    color: var(--color-pink);
+}
