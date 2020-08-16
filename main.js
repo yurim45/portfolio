@@ -21,7 +21,20 @@ navbarMenu.addEventListener("click", (event) => {
     if (link == null) {
         return;
     } else {
-        const scrollTo = document.querySelector(link);
-        scrollTo.scrollIntoView({ behavior: "smooth" });
+        scrollIntoView(link);
     }
 });
+
+// Handle contact me button 💡
+// contact Me 버튼을 클릭할 때
+const homeContactBtn = document.querySelector(".home__contact");
+homeContactBtn.addEventListener("click", () => {
+    const scrollTo = document.querySelector("#contact");
+    scrollIntoView("#contact");
+});
+
+// 스크롤 이동 함수
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: "smooth" });
+}
