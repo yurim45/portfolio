@@ -33,6 +33,14 @@ homeContactBtn.addEventListener("click", () => {
     scrollIntoView("#contact");
 });
 
+// Make home slowly fade to transparent as the window scrolls down
+// 스크롤이 되면 홈 부분 투명 처리
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
 // 스크롤 이동 함수
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
