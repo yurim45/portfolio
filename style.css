@@ -17,7 +17,7 @@
     /* Font size */
     --font-large: 48px;
     --font-medium: 32px;
-    --font-regular: 24px;
+    --font-regular: 20px;
     --font-small: 18px;
     --font-micro: 14px;
 
@@ -410,7 +410,10 @@ p {
     transform: translateY(0);
 }
 
-.project__description h3,
+.project__description h3 {
+    color: var(--color-orange);
+}
+
 .project__description span {
     color: var(--color-white);
 }
@@ -420,9 +423,9 @@ p {
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 70px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -525,18 +528,29 @@ p {
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn {
         display: block;
+        line-height: 46px;
+        right: 40px;
     }
 
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-pink);
+    }
+
+    #navbar.navbar--dark {
+        padding: 16px;
     }
 
     .navbar__menu {
         flex-direction: column;
         text-align: center;
-        width: 100%;
-        display: none;
+        width: 95%;
+        display: none; 
+    }
+
+    .navbar__menu.open {
+        display: block;
     }
 
     .about__majors {
@@ -554,17 +568,6 @@ p {
     .project {
         flex-grow: 1;
     }
-
-    .category__btn1 {
-        display: none;
-    }
-    .category__btn2 {
-        display: none;
-    }
-    .category__btn3 {
-        display: none;
-    }
-
 
     .testimonials__avatar { 
         width: 80px;
