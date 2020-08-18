@@ -12,13 +12,13 @@
     --color-blue: #73aace;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
-    --color-black: #000000;
+    --color-black: #221f1f;
 
     /* Font size */
     --font-large: 48px;
-    --font-medium: 32px;
-    --font-regular: 20px;
-    --font-small: 18px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
     --font-micro: 14px;
 
     /* Font weight */
@@ -136,10 +136,7 @@ p {
 
 .navbar__toggle-btn {
     position: absolute;
-    top: 10px;
-    right: 32px;
     margin-right: 6px;
-    font-size: 28px;
     color: var(--color-white);
     display: none;
 }
@@ -172,6 +169,10 @@ p {
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-redius);
+}
+
+.home__contact:hover {
+    background-color: var(--color-orange);
 }
 
 /* Section common */
@@ -325,6 +326,7 @@ p {
     border-radius: var(--size-border-redius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -347,9 +349,9 @@ p {
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
 }
@@ -526,10 +528,20 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+    /* Font size */
+    :root {
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+    
     .navbar__toggle-btn {
         display: block;
-        line-height: 46px;
-        right: 40px;
+        top: 13px;
+        right: 38px;
+        font-size: 24px;
     }
 
     #navbar {
@@ -555,10 +567,30 @@ p {
 
     .about__majors {
         flex-direction: column;
+        margin: 40px;
+        margin-bottom: 0;
+    }
+
+    .about__jobs {
+        padding: 30px;
     }
 
     .major {
         margin-bottom: 38px;
+    }
+
+    .major__icon i {
+        width: 150px;
+        height: 150px;
+    }
+
+    .category__btn {
+        width: 110px;
+        padding: 8px 8px;
+    }
+
+    .category__count {
+        right: 8px;
     }
 
     .skillset {
@@ -569,9 +601,42 @@ p {
         flex-grow: 1;
     }
 
+    .testimonials {
+        margin: 20px;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .testimonials__avatar { 
-        width: 80px;
-        height: 55px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .testimonials__avatar:nth-child(even),
+    .testimonials__avatar:nth-child(odd) {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .testimonials__speech-bubble {
+        order: 1;
+        padding: 10px;
+    }
+
+    .section {
+        padding: 16px;
+        padding-top: 40px;
+    }
+
+    .arrow-up {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
     }
 
 }
